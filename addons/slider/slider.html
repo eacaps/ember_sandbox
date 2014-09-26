@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="../../jquery-1.10.2.js"></script>
+<script src="../../handlebars-1.1.2.js"></script>
+<script src="../../ember-1.7.0.js"></script>
+<script src="ember.slider.js"></script>
+
+<link rel="stylesheet" href="slider.css">
+<title>Ember Slider</title>
+</head>
+<body>
+	Hello world, here are some sliders!<br>
+	<script type="text/x-handlebars" data-template-name="application">
+		<div>
+			{{view Slider.EmberSliderView value="90" size="300"}}
+		</div>
+		<br>
+		<div>
+			{{view Slider.EmberSliderView value="30" orientation="vertical"}}
+		</div>
+	</script>
+</body>
+</html>
