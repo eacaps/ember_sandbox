@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="../../jquery-1.10.2.js"></script>
+		<script src="../../handlebars-1.1.2.js"></script>
+		<script src="../../ember-1.7.0.js"></script>
+		<script src="ember.ol3map.js"></script>
+		<script src="ol-debug.js"></script>
+		
+		<link rel="stylesheet" href="ol.css">
+		
+		<style>
+			.ol-zoom .ol-zoom-out {
+				margin-top: 202px;
+			}
+			
+			.ol-zoomslider {
+				background-color: transparent;
+				top: 2.3em;
+			}
+			
+			.ol-touch .ol-zoom .ol-zoom-out {
+				margin-top: 212px;
+			}
+			
+			.ol-touch .ol-zoomslider {
+				top: 2.75em;
+			}
+		</style>
+	</head>
+	
+	<body style="margin:0px">
+		<script type="text/x-handlebars" data-template-name="application">
+			<div id="content">
+				<div id="main">
+					{{render "ol3-map"}}
+				</div>
+		</script>
+	</body>
+</html>
