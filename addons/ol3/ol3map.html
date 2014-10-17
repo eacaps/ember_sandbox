@@ -27,13 +27,28 @@
 				top: 2.75em;
 			}
 		</style>
+		
+		<script>
+			var App = Ember.Application.create();
+			
+			App.IndexView = Ember.View.extend();
+			
+			App.ApplicationController = Ember.Controller.extend({
+				queryParams: ['lat', 'lon', 'zoom', 'rotate'],
+				lat: 0,
+				lon: 0,
+				zoom: 3,
+				rotate: 0
+			});
+		</script>
+		
 	</head>
 	
 	<body style="margin:0px">
 		<script type="text/x-handlebars" data-template-name="application">
 			<div id="content">
 				<div id="main">
-					{{render "ol3-map"}}
+					{{view Ol3Map.Ol3MapView lat=lat lon=lon zoom=zoom rotate=rotate}}
 				</div>
 		</script>
 	</body>
