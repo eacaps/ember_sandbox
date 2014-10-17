@@ -53,17 +53,21 @@ Ol3Map.Ol3MapView = Ember.View.extend({
 			rotation: mrotate
 		});
 		
+		var layers = [
+		  new ol.layer.Tile({
+			source: new ol.source.TileWMS({
+			  url: 'http://demo.opengeo.org/geoserver/wms',
+			  params: {
+				'LAYERS': 'ne:NE1_HR_LC_SR_W_DR'
+			  }
+			})
+		  })
+		];
+		
 		var map = new ol.Map({
 			target: this.get('element'),
 			view: view,
-			layers: [
-				new ol.layer.Tile({
-					source: new ol.source.TileWMS({
-						url: 'http://wms.jpl.nasa.gov/wms.cgi',
-						params: {'LAYERS': 'global_mosaic', 'TILED': true}
-					})
-				})
-			]
+			layers: layers
 		});
 		
 		map.addControl(new ol.control.ZoomSlider());
